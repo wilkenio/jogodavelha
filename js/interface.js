@@ -30,19 +30,29 @@ function updateSquare() {
     })
 }
 
-function resetSquare(){
+function resetSquare() {
     let squares = document.querySelectorAll('.square');
 
     squares.forEach((square) => {
 
         square.innerText = ''
-           
+
     })
 }
+function empate() {
 
+    //document.querySelectorAll('.square').style.background = "#5941FF"
+
+
+}
 function placar1(placarPlayer0) {
-    document.getElementById('result-1').innerText = placarPlayer0
+    let x = document.getElementById('result-1')
+    x.innerText = placarPlayer0
+    x.style.animation = " result1 2s ease"
+
 }
 function placar2(placarPlayer1) {
-    document.getElementById('result-2').innerText = placarPlayer1
+    let x = document.getElementById('result-2')
+    x.innerText = placarPlayer0
+    x.style.animation = " result1 2s ease"
 }

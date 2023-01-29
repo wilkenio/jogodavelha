@@ -69,6 +69,9 @@ function isWin() {
             }
           
             //return true;
+        }else if(board[pos0] == '' && board[pos1] == '' && board[pos2] == ''){
+            //empate()
+            console.log("empate")
         }
     }
     return false;
