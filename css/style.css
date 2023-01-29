@@ -60,6 +60,14 @@ body{
     font-size: 3vh;
     font-family: R05;
 }
+@keyframes result1 {
+    0%{
+        background-color: white;
+    }
+    100%{
+        background-color: #E05751;
+    }
+}
 #placar-2{
     width: 50%;
     display: flex;
