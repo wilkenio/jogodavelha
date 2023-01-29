@@ -1,115 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">-->
-    <link rel="stylesheet" href="css/style_1.css">
-    <!--SEO-->
-    <meta name="keywords" content="Wilkemio, Pereira, programador, web," />
-    <meta name="description" content="Buscando sempre aprimorar conhecimentos na área de tecnologia.">
-
-    <meta name="author" content="Wilkenio Pereira">
-    <title>Wilkenio Pereira - Programador WEB</title>
+    <title>Jogo da Velha | Wilkenio</title>
+    <link rel="stylesheet" href="css/style.css">
+     <!--font awesome-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+     <script src="js/game.js"></script>
+     <script src="js/interface.js"></script>
 </head>
-
 <body>
-<!--MENU-->
-    <nav>
-        <i onclick="menu_mobile()" id="icon-burgue" class="fas fa-align-left"></i>
-        <ul class="ul">
-            <div onclick="menu_mobile_stop()" id="icon-x">X</div>
-            <img class="logo" src="img/wil.png" alt="">
-
-            <a href="#section-1">
-                <li onclick="fecha()">Ínicio</li>
-            </a>
-            <a href="#section-2">
-                <li onclick="fecha()">Quem sou</li>
-            </a>
-            <a href="#section-3">
-                <li onclick="fecha()">Experiências</li>
-            </a>
-            <a href="#section-4">
-                <li onclick="fecha()">Skills</li>
-            </a>
-        </ul>
-    </nav>
-<!--capa principal (section-1)-->
-    <section id="section-1">
-        <div id="capa-1">
-            <h2>Wilkenio</h2>
-            <h3>Pereira</h3>
-            <a href="#contatos"><button id="contatos-btn">Contatos</button></a>
+    <div id="placar">
+         <div id="placar-1">
+            <div id="icon-1">O</div>
+            <div id="result-1">0</div>
         </div>
-
-        <div id="capa-2">
-            <img id="img-capa-2" src="img/cap-3.png" alt="">
+        <div id="placar-2">
+            <div id="icon-2">x</div>
+            <div id="result-2">0</div>
         </div>
-    </section>
+    </div>
+    <div id="tabuleiro">
+        <div id="0" class="square"></div>
+        <div id="1" class="square"></div>
+        <div id="2" class="square"></div>
 
-<!--section 2-->
-    <section id="section-2">
-        <div id="subcapa-1"><img src="img/wil-3.png" alt=""></div>
-        <div id="subcapa-2">
-            <div>
-                <h2>Quem sou</h2>
-                <h6>Olá, eu me chamo Wilkenio, sou um entusiasta pelo universo da tecnologia e suas vertentes. Estou
-                    sempre em busca de novos desafios nesse âmbito que eu tanto amo.
-                     Sou um programador ousado, com conhecimentos em JS e PHP além de outras linguagens. Concluí alguns cursos online, e outros estão em andamento, sempre procurando estar atualizando meus conhecimentos. </h6>
-            </div>
-        </div>
-    </section>
+        <div id="3" class="square"></div>
+        <div id="4" class="square"></div>
+        <div id="5" class="square"></div>
 
-<!--section 3-->
-    <section id="section-3">
-        <div id="sub-1"><h1>Experiência</h1><h5>Alguns sites que já construí: 
-        </h5></div>
-        <div class="card-project" id="sub-2"><img src="img/jogodavelha.png" alt=""><h5>Jogo da Velha</h5><h6>Desenvolvido em HTML, CSS, JS, totalmente responsivo.</h6><a href="https://wilkenio.github.io/jogodavelha/"><button id="ver">Ver</button></a></div>
-        <div class="card-project" id="sub-3"><img src="img/site-2.png" alt=""><h5>Sistema que vende host</h5><h6> Fui convidado por um amigo de fazer um site que apresentasse o produto(host), e que ao mesmo tempo tivesse login/cadastro, e um sistema de carrinho.</h6><a href="https://nlhost7.000webhostapp.com/index.php"><button id="ver">Ver</button></a></div></div>
-        <div class="card-project" id="sub-4"><img src="img/site-2.png" alt=""><h5>Pelican Divers</h5><h6>Flight meets platform in this endless movement game</h6><a href=""><button id="ver">Ver</button></a></div>
-    </section>
-
-    <!--setion 4-->
-    <section id="section-4">
-        <div id="skills-1">SKILLS</div>
-        <div id="skills-2">
-            <img src="img/js.png" alt="">
-            <img src="img/PHP.png" alt="">
-            <img src="img/bootstrap.png" alt="">
-            <img src="img/jquery.png" alt="">
-            <img src="img/css.png" alt="">
-            <img src="img/html.png" alt="">
-        </div>
-        <div id="skills-3"><h3>WORKFLOW</h3><h5><br>
-            ✔ Domino algumas linguagens back-end, contudo me considero desenvolvedor front-end. <br>
-            ✔ Framework para agilizar a produção <br>
-            ✔ Linguagens de ponta do mercado</h5></div>
-    </section>
-
-    <!--section-5-->
-    <secrion id="contatos">
-        <div class="contatos-1"><a target="_blank" href="https://www.linkedin.com/in/wilkenio-pereira-a20765208/"><i class="fab fa-linkedin-in"></i></a></div>
-        <div class="contatos-1"><a target="_blank" href="https://github.com/wilkenio"><i class="fab fa-github"></i></a></div>
-        <div class="contatos-1"><a target="_blank" href="https://api.whatsapp.com/send?phone=55819710522036"><i class="fab fa-whatsapp"></i></a></div>
-        <a href="#section-1"><button id="topo"><i class="fa fa-arrow-up" aria-hidden="true"></i></button></a>
-    </secrion>
-
-    <footer>By Wilkenio Pereira</footer>
-
-    <!--icones (fontawesome)-->
-    <script src="https://kit.fontawesome.com/210182064c.js" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/210182064c.js" crossorigin="anonymous"></script>
-    <!--script externo-->
-    <script defer src="js/js_1.js"></script>
-    <!--jquery-->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <!--Bilblioteca de animações (AOS)-->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
+        <div id="6" class="square"></div>
+        <div id="7" class="square"></div>
+        <div id="8" class="square"></div>
+    </div>
+    
 </body>
-
 </html>
