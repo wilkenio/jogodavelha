@@ -6,8 +6,6 @@ let gameOver = false;
 let placarPlayer0 = 0
 let placarPlayer1 = 0
 
-
-
 let winStates = [
     [0, 1, 2],
     [3, 4, 5],
@@ -40,12 +38,13 @@ function handleMove(position) {
     return gameOver;
 }
 
-function reset(){
+function reset() {
     board = ['', '', '', '', '', '', '', '', ''];
     playerTime = 0;
     gameOver = false
     resetSquare()
 }
+
 function isWin() {
 
     for (let i = 0; i < winStates.length; i++) {
@@ -56,22 +55,19 @@ function isWin() {
         let pos2 = seq[2]
 
         if (board[pos0] == board[pos1] && board[pos0] == board[pos2] && board[pos0] != '') {
-           
-            if(playerTime == 0){
+
+            if (playerTime == 0) {
                 placarPlayer0++
                 placar1(placarPlayer0);
                 reset()
-                
-            }else{
+
+            } else {
                 placarPlayer1++
                 placar2(placarPlayer1);
                 reset()
             }
-          
+
             //return true;
-        }else if(board[pos0] == '' && board[pos1] == '' && board[pos2] == ''){
-            //empate()
-            console.log("empate")
         }
     }
     return false;
