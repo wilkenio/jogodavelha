@@ -37,15 +37,24 @@ function resetSquare() {
         square.innerText = ''
 
     })
+
 }
 
 function placar1(placarPlayer0) {
     let x = document.getElementById('result-1')
     x.innerText = placarPlayer0
-    x.style.animation = " result1 2s ease"
+    x.style.animation = " result1 3s ease"
 }
 function placar2(placarPlayer1) {
     let x = document.getElementById('result-2')
     x.innerText = placarPlayer1
-    x.style.animation = " result1 2s ease"
+    x.style.animation = " result1 3s ease"
 }
+
+function getRandomColor() {
+    let red = Math.floor(Math.random() * 256);
+    let blue = Math.floor(Math.random() * 256);
+    let green = Math.floor(Math.random() * 256);
+    return "rgb(" + red + ", " + blue + ", " + green + ")";
+  }
+  

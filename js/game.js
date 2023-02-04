@@ -40,13 +40,13 @@ function handleMove(position) {
 
 function reset() {
     board = ['', '', '', '', '', '', '', '', ''];
-    playerTime = 0;
+    //playerTime = 0;
     gameOver = false
     resetSquare()
 }
 
-function isWin() {
 
+function isWin() {
     for (let i = 0; i < winStates.length; i++) {
         let seq = winStates[i];
 
@@ -67,8 +67,26 @@ function isWin() {
                 reset()
             }
 
-            //return true;
+            return false;
         }
     }
+
+    let isEmpate = true;
+    for (let i = 0; i < board.length; i++) {
+        if (board[i] == '') {
+            isEmpate = false;
+            break;
+        }
+    }
+
+    if (isEmpate) {
+        // Aqui você pode adicionar a lógica para lidar com um empate
+        var body = document.querySelector("body")
+        body.style.backgroundColor = getRandomColor();
+        reset()
+
+    }
+
     return false;
 }
+
