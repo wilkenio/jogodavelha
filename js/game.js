@@ -17,6 +17,9 @@ let winStates = [
     [2, 4, 6]
 ]
 
+let tie = new Audio("../audios/tie.mp3")
+let victory = new Audio("../audios/victory.mp3")
+
 function handleMove(position) {
     if (gameOver) {
         return;
@@ -59,11 +62,13 @@ function isWin() {
             if (playerTime == 0) {
                 placarPlayer0++
                 placar1(placarPlayer0);
+                victory.play();
                 reset()
 
             } else {
                 placarPlayer1++
                 placar2(placarPlayer1);
+                victory.play();
                 reset()
             }
 
@@ -83,10 +88,10 @@ function isWin() {
         // Aqui você pode adicionar a lógica para lidar com um empate
         var body = document.querySelector("body")
         body.style.backgroundColor = getRandomColor();
+        tie.play()
         reset()
 
     }
 
     return false;
 }
-

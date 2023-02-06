@@ -1,5 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
+    //musica de inicio
     let squares = document.querySelectorAll('.square');
 
     squares.forEach((square) => {
