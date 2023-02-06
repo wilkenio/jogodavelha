@@ -1,40 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo da Velha | Wilkenio</title>
-    <link rel="stylesheet" href="css/style.css">
-     <!--font awesome-->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-     <script src="js/game.js"></script>
-     <script src="js/interface.js"></script>
+    <title>Wilkenio Pereira | Desenvolvedor Full Stack</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <!-- SEO -->
+    <meta property="og:description"    content="lá, eu me chamo Wilkenio, sou um entusiasta pelo universo da tecnologia e suas vertentes." />
+    <meta name="keywords" content="Wilkenio, Criação de sites, sistemas, desenvolvedor, programador"/>
+    <meta name="description" content="Especialistas desde 2015 em criação de sites institucionais & personalizados.">
+    <meta name="author" content="Wilkenio">
+    <meta property="business:contact_data:country_name" content="Brasil" />
+    <meta property="business:contact_data:website" content="https://www.wilkenio.tech" />
+    <meta property="business:contact_data:region" content="PE" />
+    <meta property="business:contact_data:email" content="wilkeniopereiraguitarra@gmail.com" />
+    <meta property="business:contact_data:phone_number" content="81971052203" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/css.css">
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script> 
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body>
-    <div id="placar">
-         <div id="placar-1">
-            <div id="icon-1">O</div>
-            <div id="result-1">0</div>
-        </div>
-        <div id="placar-2">
-            <div id="icon-2">x</div>
-            <div id="result-2">0</div>
-        </div>
-    </div>
-    <div id="tabuleiro">
-        <div id="0" class="square"></div>
-        <div id="1" class="square"></div>
-        <div id="2" class="square"></div>
 
-        <div id="3" class="square"></div>
-        <div id="4" class="square"></div>
-        <div id="5" class="square"></div>
+<body id="boy">
+    <nav id="nav">
+        
+        <div id="icon-mobile">
+            <i id="ham" onclick="menuabrir(this)" class="fa-solid fa-bars"></i>
+            <i id="x" onclick="menufechar(this)" class="fa-solid fa-xmark"></i>
+        </div>
+        
+        <ul id="menu-mobile">
+            <a href="">
+                <li><img id="logo-menu" src="img/logo.png" alt="logomarca"></li>
+            </a>
+            <a href="#capa">
+                <li class="itens-menu">HOME</li>
+            </a>
+            <a href="#sobre-geral">
+                <li class="itens-menu">SOBRE</li>
+            </a>
+            <a href="#portifolio">
+                <li class="itens-menu">PORTIFÓLIO</li>
+            </a>
+        </ul>
+    </nav>
 
-        <div id="6" class="square"></div>
-        <div id="7" class="square"></div>
-        <div id="8" class="square"></div>
+    <section id="capa">
+        <div id="subcapa">
+            <div id="capa-1"data-aos="fade-right"
+            data-aos-offset="200"
+            data-aos-easing="ease-in-sine">
+                <h4>Olá, eu sou </h4>
+                <h1>Wilkenio</h1>
+                <h3>Desenvolvedor <span style="color: #FCA019;">Full Stack</span></h3><br><br>
+                <a target="_blank" href="https://www.linkedin.com/in/wilkenio-pereira-a20765208/"><button class="btns-capa" id="btn-linkedin">Linkedin <i class="fa-brands fa-linkedin-in"></i></button></a>
+                <a target="_blank" href="https://github.com/wilkenio"><button class="btns-capa" id="btn-github">Github <i class="fa-brands fa-github"></i></button></a>
+            </div>
+            <div id="capa-2"></div>
+        </div>
+    </section>
+    
+    <section id="sobre-geral" data-aos="fade-up"
+    data-aos-duration="3000">
+        <div id="sobre-img"><img src="img/wilparaquedas.png" alt=""></div>
+        <div id="sobre" >
+            <h1>SOBRE MIN</h1>
+            <h5>Olá, eu me chamo Wilkenio, sou um entusiasta pelo universo da tecnologia e suas vertentes. Estou sempre em busca de novos desafios nesse âmbito que eu tanto amo. Sou um programador ousado, com conhecimentos em JS e PHP além de outras linguagens. Concluí alguns cursos online, e outros estão em andamento, sempre procurando estar atualizando meus conhecimentos.</h5>
+            <a target="_blank" href="wilkenio_cv.pdf" type="application/pdf" download="wilkenio_cv.pdf"><button class="btns-capa" id="btn-github">Download CV  <i class="fa-sharp fa-solid fa-file-arrow-down"></i></button></a>
+        </div>
+    </section>
+
+    <section id="portifolio">
+        <h1>PORTIFÓLIO</h1>
+        <div id="card-portifolio">
+            <div class="card">
+                <img src="img/jogodavelha.png" alt="imagem do site Jogo da velha"data-aos="flip-right" data-aos-duration="2000">
+                <h3>Jogo da Velha</h3><h5>Projeto desenvolvido a partir do curso PROGRAMADOR BR com algumas modificações. </h5> 
+                <br>
+                <a href="https://wilkenio.tech/jogodavelha/"><button id="visualizar">Visualizar</button></a>
+                <a href="https://github.com/wilkenio/jogodavelha"><button id="repositorio">Repositório</button></a>
+            </div>
+            <div class="card">
+                <img src="img/nlhost.png" alt="imagem do site nlhost"data-aos="flip-left" data-aos-duration="3000" data-aos-delay="200">
+                <h3>Mini E-commerce</h3><h5>Sistema desenvolvido com a ideia de criar um sistema de carrinho simples, com armazenamento máximo de um item,  ultilizando banco de dados.</h5> 
+                <br>
+                <a target="_blank" href="https://wilkenio.tech/nlhost/"><button id="visualizar">Visualizar</button></a>
+                <a target="_blank" href="https://github.com/wilkenio/nlhost"><button id="repositorio">Repositório</button></a>
+            </div>
+             <div class="card">
+                <img src="img/capa.png" alt="em andamento..."data-aos="flip-left" data-aos-duration="3000" data-aos-delay="200">
+                <h3>Em andamento...</h3><h5>.</h5> 
+                <br>
+                <a target="_blank" href="#"><button id="visualizar">Visualizar</button></a>
+                <a target="_blank" href="#"><button id="repositorio">Repositório</button></a>
+            </div>
+            <div class="card">
+                <img src="img/capa.png" alt="em andamento..."data-aos="flip-right" data-aos-duration="2000">
+                <h3>Em andamento...</h3><h5>.</h5> 
+                <br>
+                <a href="#"><button id="visualizar">Visualizar</button></a>
+                <a href="#"><button id="repositorio">Repositório</button></a>
+            </div>
+        </div>
+    </section>
+    
+    <div id="contatos">
+        <a target="_blank" href="https://www.linkedin.com/in/wilkenio-pereira-a20765208/"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a target="_blank" href="https://github.com/wilkenio"><i class="fa-brands fa-github"></i></a>
+        <a target="_blank" href="https://wa.me/5581971052203"><i class="fa-brands fa-whatsapp"></i></a>
     </div>
-    <!-- <button id="resetAnalog">Reset</button> -->
+
+    <footer>
+        By Wilkenio Pereira
+    </footer>
+    <script src="js/js.js"></script>
 </body>
+
 </html>
